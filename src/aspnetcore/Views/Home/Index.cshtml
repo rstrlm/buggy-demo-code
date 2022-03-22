@@ -1,0 +1,46 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<Routes>;
+
+
+<div class="text-center">
+    <h1 class="display-4">Buggy Demo Code</h1>
+    <p>Check out more examples of <a href="https://github.com/poppastring/buggy-demo-code">buggy sample code</a> here.</p>
+    
+    <h4 class="display-5">Unresponsive Low CPU</h4>
+    @foreach(var route in @Model.Where(x=> x.DiagnosticsGroup == DiagnosticType.UnreponsiveLowCPU))
+    {
+        <a href="@route.Url" title="">@route.Url</a> <br />
+    }
+    <br />
+
+    <h4 class="display-5">Exception</h4>
+    @foreach(var route in @Model.Where(x=> x.DiagnosticsGroup == DiagnosticType.Exceptions))
+    {
+        <a href="@route.Url" title="">@route.Url</a> <br />
+    }
+
+    <br />
+    <h4 class="display-5">Crashes</h4>
+    @foreach(var route in @Model.Where(x=> x.DiagnosticsGroup == DiagnosticType.Crash))
+    {
+        <a href="@route.Url" title="">@route.Url</a> <br />
+    }
+    <br />
+
+    <h4 class="display-5">High CPU</h4>
+    @foreach(var route in @Model.Where(x=> x.DiagnosticsGroup == DiagnosticType.HighCPU))
+    {
+        <a href="@route.Url" title="">@route.Url</a> <br />
+    }
+    <br />
+
+    <h4 class="display-5">MemoryLeak</h4>
+    @foreach(var route in @Model.Where(x=> x.DiagnosticsGroup == DiagnosticType.MemoryLeak))
+    {
+        <a href="@route.Url" title="">@route.Url</a> <br />
+    }
+
+</div>
