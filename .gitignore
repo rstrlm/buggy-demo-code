@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/src/aspnetcore/.config/dotnet-tools.json
+/.vs
+/src/BuggyDemoConsole/bin/Debug/net6.0
+/src/BuggyDemoConsole/obj/Debug/net6.0
+/src/BuggyDemoConsole/obj
+/src/aspnetcore/Properties/ServiceDependencies
